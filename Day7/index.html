@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Modal</title>
+</head>
+<body>
+    <div class="wrapper relative h-[100vh] w-[100vw] bg-[#000000] flex flex-col items-center justify-center">
+        <div class="circle1 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 absolute h-[175px] w-[175px] top-10 left-[30%] shadow-[rgba(211,_115,_255,_0.9)_0px_30px_90px]"></div>
+        <div class="circle2 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500 h-[225px] w-[225px] top-[65%] left-[55%] absolute shadow-[rgba(157,_115,_255,_0.8)_0px_10px_90px]"></div>
+        <div class="card w-[22%] px-10 py-10 flex flex-col gap-10 items-center bg-neutral-800/75 backdrop-blur-lg backdrop-opacity-90 border-none z-5">
+            <img src="./assets/img.png" class="rounded-full" alt="Profile Picture" height="150" width="150">
+            <h1 class="text-[#fca311] font-medium text-[32px] text-center">Aman Sharma</h1>
+            <h3 class="text-[#e5e5e5] text-[18px]">Web Developer</h3>
+            <div class="button flex gap-2">
+                <button onclick="openModal()" class="bg-black text-white text-[14px] px-3 py-1 rounded-md border-[1px] border-white hover:bg-white hover:text-black hover:transition-all hover:duration-500">
+                    <i class="fa-solid fa-share px-2"></i>Share My Profile
+                </button>
+                <button class="bg-black text-white text-[14px] px-3 py-1 rounded-md border-[1px] border-white hover:bg-white hover:text-black hover:transition-all hover:duration-500">
+                    Follow Me
+                </button>
+            </div>
+        </div>
+        <div class="overlay bg-white/50 backdrop-blur-lg backdrop-opacity-70 absolute z-9 h-[100vh] w-[100vw] hidden" onclick="closeModal()"></div>
+        <div class="modal flex flex-col gap-2 card absolute bg-neutral-800 border-none w-[30%] h-[25%] z-10 scale-0 transition ease-in-out duration-500 p-5">
+            <div class="header flex justify-between">
+                <h2 class="text-white">Share My Profile</h2>
+                <button onclick="closeModal()" class="text-white">Close</button>
+            </div>
+            <hr class="h-[2px] rounded-md bg-white">
+            <h3 class="text-white">Share this via</h3>
+            <div class="links flex gap-4">
+                <a href="https://linkedin.com/in/aman-sharma-as" target="_blank" class="rounded-full h-[50px] w-[50px] bg-[#ffffff] flex justify-center items-center hover:text-blue-300"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/aman-sharma-as/" target="_blank" class="rounded-full h-[50px] w-[50px] bg-[#ffffff] flex justify-center items-center hover:text-blue-300"><i class="fa-brands fa-github"></i></a>
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
+            </div>
+            
+
+        </div>
+
+    </div>
+    <script src="./script/index.js"></script>
+</body>
+</html>
