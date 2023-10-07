@@ -98,6 +98,26 @@ h1{
     cursor: pointer;
 }
 
+.display-container span{
+    position: absolute;
+    top: -20px;
+    left: -5px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    background-color: var(--vb-violet2);
+    font-size: 1rem;
+    color: var(--vb-yellow);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+}
+
+.display-container span.active{
+    opacity: 1;
+    transform: scale(1);
+}
+
 .slider{
     height: 0.75rem;
     width: 100%;
